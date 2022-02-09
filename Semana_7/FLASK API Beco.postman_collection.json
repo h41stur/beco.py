@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "accccf9f-a9cf-46e5-b736-e3569061e715",
+		"name": "FLASK API Beco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Img0MXN0dXIiLCJleHAiOjE2NDQzODA4NjR9.ArTFwTgsDAZgHJ4AJsie_XAOzBPx_TVvnFSAlMo2YKo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Img0MXN0dXIiLCJleHAiOjE2NDQzODA4NjR9.ArTFwTgsDAZgHJ4AJsie_XAOzBPx_TVvnFSAlMo2YKo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todos os usuários",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Img0MXN0dXIiLCJleHAiOjE2NDQzODA5OTZ9.tRsfUYT0_3Rxt6ONlqO22ExXKt3qe9I33ORF-7jZxxA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Img0MXN0dXIiLCJleHAiOjE2NDQzODA5OTZ9.tRsfUYT0_3Rxt6ONlqO22ExXKt3qe9I33ORF-7jZxxA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar único usuário",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"H41stur\",\n    \"username\":\"h41stur\",\n    \"password\":\"beco\",\n    \"email\":\"h41stur@beco.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletando usuário",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"H41stur\",\n    \"username\":\"h41stur\",\n    \"password\":\"beco\",\n    \"email\":\"h41stur@beco.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update usuário",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Tartaruga\",\n    \"username\":\"tortuguita123\",\n    \"password\":\"senhafoda\",\n    \"email\":\"tartaruga@bde.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticação",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "beco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "h41stur",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Tartaruga\",\n    \"username\":\"tortuguita123\",\n    \"password\":\"senhafoda\",\n    \"email\":\"tartaruga@bde.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Img0MXN0dXIiLCJleHAiOjE2NDQzODE0ODd9.uMGenQkB3JKmx10T5TNGv_-RDKJYeuFfsOldIiXvQu8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6Img0MXN0dXIiLCJleHAiOjE2NDQzODE0ODd9.uMGenQkB3JKmx10T5TNGv_-RDKJYeuFfsOldIiXvQu8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
